@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Demand Forecasting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Sales Demand Forecasting</h2>
+        <form action="/predict" method="POST">
+            <label>Price:</label>
+            <input type="number" name="price" step="any" required>
+
+            <label>Marketing Spend:</label>
+            <input type="number" name="marketing_spend" step="any" required>
+
+            <label>Season Index:</label>
+            <input type="number" name="season_index" step="any" required>
+
+            <label>Competitor Price:</label>
+            <input type="number" name="competitor_price" step="any" required>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
